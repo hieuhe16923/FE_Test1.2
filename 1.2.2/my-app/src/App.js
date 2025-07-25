@@ -10,8 +10,8 @@ function App() {
     let value = inputValue.trim();
     if (value === '') return;
 
-    if (value.length > 50) {
-      value = value.slice(0, 50);
+    if (value.length > 100) {
+      value = value.slice(0, 100);
     }
 
     if (editingIndex !== null) {
@@ -50,7 +50,7 @@ function App() {
           className="form-control"
           placeholder="Nhập công việc mới..."
           value={inputValue}
-          maxLength={50}
+          maxLength={100}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === 'Enter') handleAddOrEdit();
